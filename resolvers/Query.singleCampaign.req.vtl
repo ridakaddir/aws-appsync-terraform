@@ -1,0 +1,10 @@
+{
+  "version": "2018-05-29",
+  "operation": "GetItem",
+  
+
+    "key" : {
+        "campaignId" : $util.dynamodb.toDynamoDBJson($context.arguments.campaignId)
+    }
+
+}

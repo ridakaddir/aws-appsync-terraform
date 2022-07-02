@@ -1,0 +1,26 @@
+type Campaign {
+  campaignId: ID
+  campaignName: String
+  campaignType: String
+  campaignValue: Int
+}
+
+type Query {
+  singleCampaign(campaignId: ID): Campaign
+}
+
+input campaignInput {
+  campaignId: ID
+  campaignName: String
+  campaignType: String
+  campaignValue: Int
+}
+
+type Mutation {
+  createCampaign(campaignInput: campaignInput): Campaign
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}
